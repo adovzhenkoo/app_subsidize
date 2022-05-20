@@ -1,0 +1,1 @@
+/home/archway/subside/target/debug/libsubside.so: /home/archway/subside/src/contract.rs /home/archway/subside/src/error.rs /home/archway/subside/src/lib.rs /home/archway/subside/src/msg.rs /home/archway/subside/src/state.rs

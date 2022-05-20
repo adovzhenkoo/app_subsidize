@@ -1,0 +1,89 @@
+{
+  "name": "subside",
+  "developer": {
+    "archwayd": {
+      "docker": true
+    },
+    "scripts": {
+      "test": "cargo unit-test",
+      "build": "cargo build",
+      "optimize": "cargo run-script optimize",
+      "wasm": "cargo wasm",
+      "query": "archwayd query wasm",
+      "tx": "archwayd tx wasm execute"
+    },
+    "deployments": [
+	{
+        "type": "set-metadata",
+        "chainId": "torii-1",
+        "contract": "archway1q59l38duf5zag8xqg9k5z4xxanszcwd40nc5w3w6gjactr7s8y4q926483",
+        "contractMetadata": {
+          "developerAddress": "archway1h87ltaukqg2lpj4jyqzvaugpquu3njvu88r0d2",
+          "rewardAddress": "archway1h87ltaukqg2lpj4jyqzvaugpquu3njvu88r0d2",
+          "collectPremium": false,
+          "gasRebate": true
+        }
+      },
+      {
+        "type": "instantiate",
+        "chainId": "torii-1",
+        "codeId": 52504,
+        "address": "archway1q59l38duf5zag8xqg9k5z4xxanszcwd40nc5w3w6gjactr7s8y4q926483",
+        "admin": "archway1h87ltaukqg2lpj4jyqzvaugpquu3njvu88r0d2"
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 52504
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 52483
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 52469
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 52463
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 52433
+      }
+    ]
+  },
+  "network": {
+    "name": "torii",
+    "chainId": "torii-1",
+    "type": "testnet",
+    "fees": {
+      "feeDenom": "utorii"
+    },
+    "gas": {
+      "prices": "0.003utorii",
+      "mode": "auto",
+      "adjustment": "1.3"
+    },
+    "wasm": {
+      "bech32Hrp": "archway",
+      "archwayd": "0.0.5",
+      "configDir": ".archway",
+      "binary": "archwayd"
+    },
+    "urls": {
+      "rpc": {
+        "url": "https://rpc.torii-1.archway.tech",
+        "port": 443
+      },
+      "faucets": [
+        "https://faucet.torii-1.archway.tech"
+      ]
+    }
+  }
+}

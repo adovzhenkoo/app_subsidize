@@ -1,0 +1,1 @@
+9c03dd6a321deb9495e263a032949992a1e4332751ce8137184f732cd93818b6  ./target/wasm32-unknown-unknown/release/subside.wasm
